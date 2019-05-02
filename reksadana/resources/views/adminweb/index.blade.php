@@ -1,0 +1,18 @@
+@extends('adminweb.default')
+@section('content')
+<div class="adminweb">
+<h3>Admin web</h3>
+<form class="form-login" method="POST">
+	@csrf
+	<div class="form-group">
+	<label>Username</label>
+	<input type="text" name="username" required>
+	</div>
+	<div class="form-group">
+	<label>Password</label>
+	<input type="password" name="password" required>
+	</div>
+	<button class="btn btn-secondary">Login</button>
+</form>
+</div>
+@stop
