@@ -35,7 +35,7 @@
 </nav>
 @yield('content')
 <div class="footer bg-info">
-	<h6 style="text-align:center">Copyright 2019. All rights reserved.</h6>
+	<h6 style="text-align:center">&copy; <?php echo date("Y");?>, All rights reserved.</h6>
 </div>
 </body>
 </html>

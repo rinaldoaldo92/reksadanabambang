@@ -1,7 +1,8 @@
 @extends('adminweb.pagedefault')
 @section('content')
-<div class="side-content">
+<div class="container-fluid">
 <h2>Edit Konten</h2>
+<hr>
 <form method="POST">
 @csrf
 <div class="form-group">

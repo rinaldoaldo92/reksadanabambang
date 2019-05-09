@@ -16,5 +16,8 @@
 </head>
 <body>
 @yield('content')
+<div class="footer bg-info">
+	<h6 style="text-align:center">&copy; <?php echo date("Y");?>, All rights reserved.</h6>
+</div>
 </body>
 </html>

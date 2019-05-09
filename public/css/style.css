@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300|Karla');
+@import url('https://fonts.googleapis.com/css?family=Quicksand|Cabin');
 
 a, p, li, b, button, label {
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Quicksand', sans-serif;
 }
 
 blockquote, h1, h2, h3, h4, h5, h6, input, textarea {
-	font-family: 'Karla', sans-serif;
+	font-family: 'Cabin', sans-serif;
 }
 
 .nav-link, .nav-link:hover {
@@ -16,19 +16,12 @@ blockquote, h1, h2, h3, h4, h5, h6, input, textarea {
 	background-color: grey;
 }
 
-#content1, #content2, #content3, #content4, #content5, #content6 {
-	min-height: : 100vh;
-	padding: 15px;
-}
-
-#cara, #slide {
+#content1, #content2, #content3, #content4, #content5, #content6, #cara, #slide, #promo, #ajakan, .container-fluid {
 	min-height: 100vh;
 	padding: 15px;
 }
 
 #promo {
-	height: 300px;
-	padding: 15px;
 	background: red;
 }
 
@@ -37,8 +30,6 @@ blockquote, h1, h2, h3, h4, h5, h6, input, textarea {
 }
 
 #ajakan {
-	height: 400px;
-	padding: 15px;
 	background: orchid;
 }
 
@@ -100,24 +91,15 @@ blockquote, h1, h2, h3, h4, h5, h6, input, textarea {
 	content: "			|			";
 }
 
-.form-login {
-
-}
-
-.form-group {
-	display: grid;
-	padding: 5px;
-}
-
 .adminweb, .form {
 	margin: auto;
 	width: 100%;
-	max-width: 550px;
+	max-width: 600px;
 	padding: 15px;
-	height: 100%;
+	min-height: 100vh;
 }
 
-.form-group input, .form-group textarea {
+.form-group input, .form-group select {
 	border: none;
 	border-bottom-width: 1px;
 	border-bottom-color: black;

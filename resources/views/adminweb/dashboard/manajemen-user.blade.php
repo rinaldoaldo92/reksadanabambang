@@ -1,8 +1,9 @@
 @extends('adminweb.pagedefault')
 @section('content')
-<div class="side-content">
+<div class="container-fluid min-vh-100">
 <h2>Manajemen User</h2>
 <a href="/adminweb/dashboard/buat-user"><button class="btn btn-primary">Tambah User</button></a>
+<br>
 <br>
 <div class="table-responsive">
 <table class="table">

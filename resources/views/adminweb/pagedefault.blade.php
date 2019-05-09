@@ -13,10 +13,15 @@
 	<script type="text/javascript" src="{{URL::asset('js/popper.min.js')}}"></script>
 	<script type="text/javascript" src="{{URL::asset('js/bootstrap.min.js')}}"></script>
 	<script type="text/javascript" src="{{URL::asset('js/bootstrap.js')}}"></script>
+	<script type="text/javascript" src="{{URL::asset('js/ckeditor/ckeditor.js')}}"></script>
 </head>
 <body>
-<nav class="side-nav">
-	<ul class="nav flex-column">
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarreksadana">
+		<span class="navbar-toggle-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarreksadana">
+	<ul class="navbar-nav mr-auto">
 	  <li class="nav-item">
 	    <a class="nav-link" href="/adminweb/dashboard">Beranda</a>
 	  </li>
@@ -38,5 +43,11 @@
 	</ul>
 </nav>
 @yield('content')
+<div class="footer bg-secondary">
+	<h6 style="text-align:center">&copy; <?php echo date("Y");?>, All rights reserved.</h6>
+</div>
+	<script type="text/javascript">
+		CKEDITOR.replace('textarea_dashboard');
+	</script>
 </body>
 </html>

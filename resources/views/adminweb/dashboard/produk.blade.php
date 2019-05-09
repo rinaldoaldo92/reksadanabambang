@@ -1,16 +1,15 @@
 @extends('adminweb.pagedefault')
 @section('content')
-<div class="side-content">
+<div class="container-fluid">
 <h2>Produk</h2>
 <a href="/adminweb/dashboard/buat-konten-produk"><button class="btn btn-primary">Buat Produk</button></a>
+<br>
 <br>
 <div class="table-responsive">
 <table class="table">
 	<thead class="thead-info">
 		<tr>
-			<th scope="col">#</th>
 			<th scope="col">Nama Produk</th>
-			<th scope="col">Keterangan</th>
 			<th scope="col">Jenis Produk</th>
 			<th scope="col">Prospektus</th>
 			<th scope="col">Fund Fact Sheet</th>
@@ -23,11 +22,11 @@
 	<tbody>
 		@foreach($produk as $p)
 		<tr>
-			<td>{{$p->id}}</td>
-			<td>{{$p->judul}}</td>
-			<td>{{$p->konten}}</td>
-			<td>{{$p->slug}}</td>
-			<td>{{$p->kategori}}</td>
+			<td>{{$p->nama_produk}}</td>
+			<td>{{$p->jenis_produk}}</td>
+			<td>{{$p->prospektus}}</td>
+			<td>{{$p->fundfactsheet}}</td>
+			<td>{{$p->brosur}}</td>
 			<td>{{$p->created_at}}</td>
 			<td>{{$p->updated_at}}</td>
 			<td> 

@@ -20,6 +20,9 @@ Route::get('/ulasan-investasi/{any}', 'ProdukController@ulasan');
 Route::get('/adminweb', 'ProdukController@adminweb');
 Route::get('/adminweb/dashboard', 'ProdukController@dashboard_index');
 Route::get('/adminweb/dashboard/konten', 'ProdukController@konten');
+Route::get('/adminweb/dashboard/buat-konten', 'ProdukController@buatkonten');
+Route::post('/adminweb/dashboard/buat-konten', 'ProdukController@proseskonten');
+Route::get('/adminweb/dashboard/buat-user', 'ProdukController@buatuser');
 Route::get('/adminweb/dashboard/edit-konten/{any}', 'ProdukController@');
 Route::post('/adminweb/dashboard/edit-konten/{any}', 'ProdukController@');
 Route::get('/adminweb/dashboard/edit-konten-produk/{any}', 'ProdukController@');
@@ -31,8 +34,8 @@ Route::get('/adminweb/dashboard/edit-user/{any}', 'ProdukController@');
 Route::post('/adminweb/dashboard/edit-user/{any}', 'ProdukController@');
 Route::post('/adminweb/dashboard/delete-user/{any}', 'ProdukController@');
 Route::get('/adminweb/dashboard/produk', 'ProdukController@produk');
-Route::get('/adminweb/dashboard/{page}', 'ProdukController@dashboard_page');
-Route::post('/adminweb/dashboard/logout', 'ProdukController@dashboard_logout');
+Route::get('/adminweb/dashboard/profil', 'ProdukController@profil');
+Route::any('/adminweb/dashboard/logout', 'ProdukController@dashboard_logout');
 Route::post('/adminweb', array('uses' => 'ProdukController@adminwebLogin'));
 
 /*reksadanaonline*/

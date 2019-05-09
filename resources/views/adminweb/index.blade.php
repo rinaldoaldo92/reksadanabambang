@@ -1,7 +1,8 @@
 @extends('adminweb.default')
 @section('content')
 <div class="adminweb">
-<h3>Admin web</h3>
+<h3>Adminweb Bambang Aset</h3>
+@include('adminweb.dashboard.flash')
 <form class="form-login" method="POST">
 	@csrf
 	<div class="form-group">

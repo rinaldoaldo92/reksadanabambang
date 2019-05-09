@@ -28,18 +28,18 @@ class ProdukController extends Controller
         return view('/'.$page);
     }
 
-    public function informasi() {
+    public function informasi($id) {
 
         $informasi = Ulasan::get();        
 
-        return view('informasi/'.$slug, ['informasi' => $informasi]);
+        return view('informasi/'.$id, ['informasi' => $informasi]);
     }
 
-    public function ulasan() {
+    public function ulasan($id) {
 
-        $ulasan = Ulasan::get();        
+        $ulasan = Ulasan::select()->where('kategori', 'Ulasan Investasi')->first(); 
 
-        return view('ulasan-investasi/'.$slug, ['ulasan' => $ulasan]);
+        return view('ulasan-investasi/'.$id, ['ulasan' => $ulasan]);
 
     }
 
@@ -47,7 +47,7 @@ class ProdukController extends Controller
 
         $promo = Ulasan::get(); 
 
-        return view('/reksadanaonline', ['promo' => $promo]);
+        return view('/reksadanaonline#promo', ['promo' => $promo]);
 
     }
 
@@ -80,12 +80,12 @@ class ProdukController extends Controller
 
             } else {
 
-                echo "gagal";
+                return redirect('adminweb')->with('warning', 'Username dan password yang diinput salah. Mohon dicek kembali.');            
             }
 
         } else {
 
-            echo "gagal";
+            return redirect('adminweb')->with('error', 'Error yang tak diketahui.');  
 
         }
 
@@ -107,7 +107,16 @@ class ProdukController extends Controller
 
     }
 
+
     public function buatkonten() {
+
+        return view('adminweb.dashboard.buat-konten');
+
+    }
+
+    public function proseskonten(Request $request) {
+
+        date_default_timezone_set("Asia/Jakarta");
 
         $validasi = $request->validate([
             'judul' => 'required|string|max:255',
@@ -117,21 +126,22 @@ class ProdukController extends Controller
 
         if($validasi) {
 
-            Ulasan_promo::create([
+            Ulasan::create([
                 'judul' => $request->judul,
                 'konten' => $request->konten,
-                'kategori' => $request->kategori
+                'kategori' => $request->kategori,
+                'dibuat_oleh' => Session::get('nama')
             ]);
 
-            return redirect('adminweb.dashboard.buat-konten')->with('info');
+            return view('adminweb.dashboard.buat-konten')->with('info');
 
 
         } else {
 
-            return redirect('adminweb.dashboard.buat-konten')->with('warning');
+            return view('adminweb.dashboard.buat-konten')->with('warning');
 
         }
-
+    
     }
 
     public function editkonten() {
@@ -158,6 +168,12 @@ class ProdukController extends Controller
 
     }
 
+    public function buatuser() {
+
+        return view('adminweb.dashboard.buat-user');
+
+    }
+
     public function produk() {
 
         $produk = Produk::get();
@@ -166,10 +182,21 @@ class ProdukController extends Controller
 
     }
 
-    public function dashboard_logout() {
+    public function profil() {
+
+        $id = Session::get('id');
+
+        $profil = Backoffice::whereIn('id', session('id'))->get();
+
+        return view('adminweb.dashboard.profil', ['profil' => $profil]);
+
+    }
+
+    public function dashboard_logout(Request $request) {
         
-        session::flush();
-        return view('adminweb');
+        $request->session()->flush();
+
+        return redirect('adminweb');
 
     }
 

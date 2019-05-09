@@ -61,29 +61,29 @@
 </div>
 <div id="content4">
 <h2 style="text-align:center">Informasi</h2>
-<div class="card dark bg-danger scale-card-content">
 <?php foreach ($informasi as $i ) { ?>
+<div class="card dark bg-danger scale-card-content">
 <img class="card-img" src="/files/{{$i->gambar}}">
 <div class="card-body">
 <h5 class="card-title">{{$i->judul}}</h5>
 <p class="card-text">{{$i->konten}}</p>
 <a href="/informasi/{{$i->slug}}"><button class="btn btn-primary">Selengkapnya</button></a>
+</div>
+</div>
 <?php } ?>
-</div>
-</div>
 </div>
 <div id="content5">
 <h2 style="text-align:center">Ulasan Investasi</h2>
-<div class="card dark bg-danger scale-card-content">
 <?php foreach ($ulasan as $u ) { ?>
+<div class="card dark bg-danger scale-card-content">
 <img class="card-img" src="/files/{{$i->gambar}}">
 <div class="card-body">
 <h5 class="card-title">{{$u->judul}}</h5>
 <p class="card-text">{{$u->konten}}</p>
-<a href="ulasan-investasi/{{$u->slug}}"><button class="btn btn-primary">Selengkapnya</button></a>
+<a href="ulasan-investasi/{{$u->id}}"><button class="btn btn-primary">Selengkapnya</button></a>
+</div>
+</div>
 <?php } ?>
-</div>
-</div>
 </div>
 <div id="content6">
 <h2 style="text-align:center">Hubungi Kami</h2>

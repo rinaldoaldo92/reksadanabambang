@@ -1,9 +1,12 @@
 @extends('adminweb.pagedefault')
 @section('content')
-<div class="side-content">
+<div class="container-fluid">
 <h2>Profil</h2>
-<label>Nama</label> <?php echo session()->get('nama')?>
-<label>Jabatan</label> <?php echo session()->get('jabatan')?>
-<label>Username</label> <?php echo session()->get('username')?>
+<hr>
+<?php foreach($profil as $p) { ?>
+<b>Nama</b> <p>{{$profil->nama}}</p>
+<b>Jabatan</b> <p>{{$p->jabatan}}</p>
+<b>Username</b> <p>{{$p->username}}</p>
+<?php } ?>
 </div>
 @stop

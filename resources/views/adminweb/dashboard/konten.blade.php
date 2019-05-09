@@ -1,8 +1,9 @@
 @extends('adminweb.pagedefault')
 @section('content')
-<div class="side-content">
+<div class="container-fluid">
 <h2>Konten</h2>
 <a href="/adminweb/dashboard/buat-konten"><button class="btn btn-primary">Buat Konten</button></a>
+<br>
 <br>
 <div class="table-responsive">
 <table class="table">
@@ -10,8 +11,6 @@
 		<tr>
 			<th scope="col">#</th>
 			<th scope="col">Judul</th>
-			<th scope="col">Konten</th>
-			<th scope="col">Slug</th>
 			<th scope="col">Kategori</th>
 			<th scope="col">Dibuat pada</th>
 			<th scope="col">Diubah pada</th>
@@ -23,8 +22,6 @@
 		<tr>
 			<td>{{$k->id}}</td>
 			<td>{{$k->judul}}</td>
-			<td>{{$k->konten}}</td>
-			<td>{{$k->slug}}</td>
 			<td>{{$k->kategori}}</td>
 			<td>{{$k->created_at}}</td>
 			<td>{{$k->updated_at}}</td>

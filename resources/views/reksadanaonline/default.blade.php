@@ -60,16 +60,16 @@
 </div>
 @yield('content')
 <div class="container-fluid bg-primary">
-<div class="footer">
+	<div class="footer">
 	<div class="row">
-		<div class="col">
+		<div class="col-md-4">
 		<h5>Ikuti sosial media kami</h5>
 		</div>
-		<div class="col">
+		<div class="col-md-4">
 		<h5>Perhatian</h5>
 		<p>Produk reksadana tidak termasuk dalam penjaminan pemerintah, harap membaca prospektus untuk memahami resiko-resiko yang mungkin terjadi saat berinvestasi di reksadana. </p>
 		</div>
-		<div class="col">
+		<div class="col-md-4">
 		<h5>Hubungi Kami</h5>
 		<b>PT Bambang Aset Manajemen</b>
 		<p>Sahid Sudirman Center, Lantai 25 Unit F</p>
@@ -79,8 +79,8 @@
 		<p>E-mail : cs@bambang-aset.co.id</p>
 		</div>
 	</div>
-	<p style="text-align:center">Copyright 2019. All rights reserved.</p>
-</div>
+	<h6 style="text-align:center">Copyright 2019. All rights reserved.</h6>
+	</div>
 </div>
 </body>
 </html>

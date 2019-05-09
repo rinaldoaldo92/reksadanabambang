@@ -1,8 +1,8 @@
 @extends('reksadanaonline.default')
 @section('content')
-<div id="slide">
+<div id="slide" class="container-fluid">
 </div>
-<div id="cara">
+<div id="cara" class="container-fluid">
 <h2 style="text-align: center;">Cara untuk berinvestasi</h2>
 	<div class="row">
 		<div class="col-6 col-md-3">
@@ -25,20 +25,18 @@
 		</div>
 	</div>
 </div>
-<div id="promo">
+<div id="promo" class="container-fluid">
 <h2 style="text-align: center;">Promo yang tersedia saat ini</h2>
 <div class="card dark bg-danger scale-card-content">
-<?php foreach ($promo as $p ) { ?>
-<img class="card-img" src="/files/{{$p->gambar}}">
+<img class="card-img" src="/files/">
 <div class="card-body">
-<h5 class="card-title">{{$p->judul}}</h5>
-<p class="card-text">{{$p->konten}}</p>
-<a href="/informasi/{{$p->slug}}"><button class="btn btn-primary">Selengkapnya</button></a>
-<?php } ?>
+<h5 class="card-title"></h5>
+<p class="card-text"></p>
+<a href="/informasi/"><button class="btn btn-primary">Selengkapnya</button></a>
 </div>
 </div>
 </div>
-<div id="ajakan">
+<div id="ajakan" class="container-fluid">
 <div class="row">
 <div class="col-6 col-md-6">
 <h3>Sudah ingin berinvestasi?</h3>
